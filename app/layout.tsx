@@ -18,9 +18,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Image src="/background.png" alt="Background image" fill={true} objectFit="cover" className="-z-10" />
-
+      <body className={`${inter.className}`}>
+        <Image
+          src="/background.png"
+          alt="Background image"
+          fill={true}
+          objectFit="cover"
+          className="-z-10"
+        />
         <Header />
         {children}
       </body>

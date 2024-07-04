@@ -1,29 +1,27 @@
 import React from "react";
 import Image from "next/image";
 
+const text =
+  "We're a team of indie game developers, brought together by our passion for well-made, thought-provoking games. We started out in Fall 2023 with nothing but an idea, and now we're more than a dozen developers, working on our first game.";
+
 export default function Intro() {
   return (
-    <section className="bg-black text-white flex flex-row min-h-screen p-16 space-x-8 items-center">
-      <div className="flex-col space-y-4">
-        <h2 className="text-2xl font-bold text-white">About Us</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-          facilisis, magna luctus tincidunt blandit, ligula magna pellentesque
-          risus, vel ullamcorper massa leo eu neque. Duis ut pharetra leo. Proin
-          in ante imperdiet, porttitor orci at, feugiat nibh. Aliquam eleifend
-          vestibulum convallis. Integer pretium lobortis hendrerit. Suspendisse
-          felis nisl, lacinia eu felis id, maximus euismod augue. Ut gravida
-          auctor nisi, hendrerit varius sem pretium id. Fusce sodales lacus non
-          egestas suscipit. Aliquam erat volutpat. Cras justo massa, commodo sed
-          risus ut, tincidunt fermentum tortor. Maecenas quam eros, lobortis vel
-          tempor ut, hendrerit eu justo. Nulla vel lacus gravida ex aliquet
-          pellentesque. Orci varius natoque penatibus et magnis dis parturient
-          montes, nascetur ridiculus mus. Nulla interdum turpis at egestas
-          consectetur. Maecenas vel sagittis magna.
-        </p>
-      </div>
-      <div className="flex-initial">
-        <img src="/introImage.JPG" alt="Image" className="object-contain" />
+    <section className="bg-black py-12 md:py-16 lg:py-24">
+      <div className="container mx-auto px-8 md:px-12 grid md:grid-cols-2 gap-8">
+        <div className="text-white py-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+            About Us
+          </h2>
+          <p className="text-lg md:text-xl">{text}</p>
+        </div>
+        <div className="flex flex-initial items-center justify-center relative w-full h-full">
+          <Image
+            src="/introImage.JPG"
+            alt="Intro section image"
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
       </div>
     </section>
   );
