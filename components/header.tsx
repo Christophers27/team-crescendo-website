@@ -18,12 +18,11 @@ const underline = {
 
 export default function Header() {
   const { showNav, toggleNav } = useMenuContext();
-  const [homeHover, setHomeHover] = useState(false);
 
   return (
-    <>
+    <div className="absolute top-0 w-full">
       <header className="flex flex-row p-8 md:p-12 relative z-[999]">
-        <div className="rounded-full fixed">
+        <div className="rounded-full fixed backdrop-blur-sm items-center justify-center p-2">
           <button onClick={toggleNav}>
             <AiOutlineMenu className="text-4xl text-white" />
           </button>
@@ -55,10 +54,27 @@ export default function Header() {
                   className="w-full h-1 origin-left"
                 />
               </motion.div>
+              <motion.div
+                className="-space-y-4"
+                initial="rest"
+                animate="rest"
+                whileHover="hover"
+              >
+                <a
+                  href="/about-us"
+                  className="block text-white text-4xl font-bold mb-4"
+                >
+                  ABOUT
+                </a>
+                <motion.div
+                  variants={underline}
+                  className="w-full h-1 origin-left"
+                />
+              </motion.div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </div>
   );
 }

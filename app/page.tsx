@@ -1,4 +1,5 @@
 import Intro from "@/components/intro";
+import Noire from "@/components/noire";
 import Title from "@/components/title";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <main className="">
       <Title />
       <Intro />
+      <Noire />
     </main>
   );
 }
