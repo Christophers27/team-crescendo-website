@@ -1,13 +1,15 @@
 import Intro from "@/components/intro";
-import Noire from "@/components/noire";
+import GamesSection from "@/components/gamesSection";
 import Title from "@/components/title";
+import ImageDivider from "@/components/imageDivider";
 
 export default function Home() {
   return (
     <main className="">
       <Title />
       <Intro />
-      <Noire />
+      <ImageDivider />
+      <GamesSection />
     </main>
   );
 }
