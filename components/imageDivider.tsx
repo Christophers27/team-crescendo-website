@@ -8,8 +8,8 @@ export default function ImageDivider() {
         alt="Image Divider"
         className="w-full h-full object-cover object-center"
       />
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black to-10%"></div>
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-[#b5b4b5] to-10%"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#000310] to-10%"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-[#938d5d] to-10%"></div>
     </div>
   );
 }

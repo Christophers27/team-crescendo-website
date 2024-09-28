@@ -10,7 +10,7 @@ export default function Title() {
 
   return (
     <motion.section
-      className={`flex flex-col justify-center items-center pt-[40vh] pb-[30vh] bg-gradient-to-b from-transparent to-black space-y-4 ${
+      className={`flex flex-col justify-center items-center pt-[40vh] pb-[30vh] bg-gradient-to-b from-70% from-transparent to-[#000310] space-y-4 ${
         showNav ? "opacity-60" : ""
       }`}
       style={{ transition: "opacity 0.5s ease-in-out" }}

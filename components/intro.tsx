@@ -13,7 +13,7 @@ export default function Intro() {
 
   return (
     <motion.section
-      className={`bg-black py-12 md:py-16 lg:py-24 ${
+      className={`bg-[#000310] py-12 md:py-16 lg:py-24 ${
         showNav ? "opacity-60" : ""
       }`}
       style={{ transition: "opacity 0.5s ease-in-out" }}
@@ -36,6 +36,7 @@ export default function Intro() {
             width={100}
             height={100}
             objectFit="contain"
+            className="rounded-xl"
           />
         </div>
       </div>

@@ -7,6 +7,22 @@ import { motion } from "framer-motion";
 const text =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et tellus sit amet massa posuere accumsan at non elit. Vivamus lobortis, mauris ac rutrum hendrerit, urna elit aliquet lacus, vitae elementum sem justo id eros. Ut vitae nulla dui. Donec ac justo sit amet mi vehicula sodales vel non est. Etiam vel rhoncus diam. Etiam elementum nulla vel libero dapibus mattis. In tincidunt tristique turpis id lacinia.";
 
+const memberData = [
+  { name: "Chris", role: ["Writer"] },
+  { name: "Cole", role: ["Manager", "Writer"] },
+  { name: "Daniel", role: ["Manager", "Engineer"] },
+  { name: "Emma", role: ["Artist"] },
+  { name: "Felix", role: ["Composer", "Engineer"] },
+  { name: "Hank", role: ["Director", "Engineer"] },
+  { name: "JingXuan", role: ["Engineer"] },
+  { name: "Leslie", role: ["Artist"] },
+  { name: "Mark", role: ["Composer"] },
+  { name: "Miguel", role: ["Marketing"] },
+  { name: "Nia", role: ["Artist"] },
+  { name: "Pheht", role: ["Artist"] },
+  { name: "Xiao", role: ["Engineer"] },
+];
+
 export default function Page() {
   return (
     <main className="bg-slate-950 flex flex-col items-center text-white min-h-screen px-4 md:px-16 lg:px-32">
@@ -67,26 +83,24 @@ export default function Page() {
         </motion.h2>
         <div className="overflow-hidden max-w-[90vw] md:max-w-2xl lg:max-w-4xl">
           <div className="flex overflow-x-auto w-auto py-4 px-2 text-black">
-            {[
-              { name: "Alice", role: "Developer" },
-              { name: "Bob", role: "Designer" },
-              { name: "Charlie", role: "Project Manager" },
-              { name: "David", role: "Developer" },
-              { name: "Eve", role: "Designer" },
-              { name: "Frank", role: "Developer" },
-              { name: "Grace", role: "Designer" },
-              { name: "Heidi", role: "Developer" },
-              { name: "Ivan", role: "Designer" },
-              { name: "Judy", role: "Developer" },
-              { name: "Kevin", role: "Designer" },
-              { name: "Linda", role: "Developer" },
-            ].map((member, index) => (
+            {memberData.map((member, index) => (
               <div
                 key={index}
                 className="flex-none w-60 h-40 m-2 bg-gray-200 rounded-lg shadow p-4"
               >
-                <h3 className="text-lg font-bold">{member.name}</h3>
-                <p>{member.role}</p>
+                <h3 className="text-lg font-bold mb-2">{member.name}</h3>
+                {
+                  <ul className="list-none space-y-2">
+                    {member.role.map((role, index) => (
+                      <li
+                        key={index}
+                        className="bg-slate-400 rounded-full px-2 w-fit"
+                      >
+                        {role}
+                      </li>
+                    ))}
+                  </ul>
+                }
               </div>
             ))}
           </div>

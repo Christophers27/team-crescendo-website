@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className}`}>
-        <div className="fixed top-0 left-0 w-full h-full -z-[998] bg-indigo-950">
+        <div className="fixed top-0 left-0 w-full h-full -z-[998] bg-[#433d60]">
           <Image
             src="/background.png"
             alt="Background image"
