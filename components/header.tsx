@@ -19,10 +19,24 @@ const underline = {
 export default function Header() {
   const { showNav, toggleNav } = useMenuContext();
 
+  const link = (text: string, href: string) => (
+    <motion.div
+      className="-space-y-4"
+      initial="rest"
+      animate="rest"
+      whileHover="hover"
+    >
+      <a href={href} className="block text-white text-4xl font-bold mb-4">
+        {text}
+      </a>
+      <motion.div variants={underline} className="w-full h-1 origin-left" />
+    </motion.div>
+  );
+
   return (
     <div className="absolute top-0 w-full">
-      <header className="flex flex-row p-8 md:p-12 relative z-[999]">
-        <div className="rounded-full fixed backdrop-blur-sm items-center justify-center p-2">
+      <header className="flex flex-row section relative z-[999]">
+        <div className="fixed backdrop-blur-sm items-center justify-center">
           <button onClick={toggleNav}>
             <AiOutlineMenu className="text-4xl text-white" />
           </button>
@@ -31,46 +45,14 @@ export default function Header() {
       <AnimatePresence>
         {showNav && (
           <motion.div
-            className="fixed inset-0 bg-black bg-opacity-80 z-[998] flex pt-40 px-8 md:px-12"
+            className="fixed inset-0 bg-black bg-opacity-80 z-[998] flex pt-40 px-8 md:px-16 lg:px-32"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
             <div className="space-y-8 w-screen flex flex-col items-center md:items-start">
-              <motion.div
-                className="-space-y-4"
-                initial="rest"
-                animate="rest"
-                whileHover="hover"
-              >
-                <a
-                  href="/"
-                  className="block text-white text-4xl font-bold mb-4"
-                >
-                  HOME
-                </a>
-                <motion.div
-                  variants={underline}
-                  className="w-full h-1 origin-left"
-                />
-              </motion.div>
-              <motion.div
-                className="-space-y-4"
-                initial="rest"
-                animate="rest"
-                whileHover="hover"
-              >
-                <a
-                  href="/about-us"
-                  className="block text-white text-4xl font-bold mb-4"
-                >
-                  ABOUT
-                </a>
-                <motion.div
-                  variants={underline}
-                  className="w-full h-1 origin-left"
-                />
-              </motion.div>
+              {link("HOME", "/")}
+              {link("ABOUT", "/about-us")}
             </div>
           </motion.div>
         )}

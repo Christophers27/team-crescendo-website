@@ -24,7 +24,7 @@ export default function Title() {
         <Image src="/logo.png" alt="Logo" layout="fill" objectFit="contain" />
       </motion.div>
       <motion.h1
-        className="text-4xl md:text-5xl lg:text-6xl font-bold text-white"
+        className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white"
         initial={{ y: 200, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}

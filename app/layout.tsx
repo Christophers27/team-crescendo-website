@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/header";
 import Image from "next/image";
 import MenuContextProvider from "@/context/menuContext";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,19 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className}`}>
-        <div className="fixed top-0 left-0 w-full h-full -z-[998] bg-[#433d60]">
-          <Image
-            src="/background.png"
-            alt="Background image"
-            fill={true}
-            objectFit="cover"
-            className="-z-[999]"
-          />
-        </div>
-
         <MenuContextProvider>
           <Header />
           {children}
+          <Footer />
         </MenuContextProvider>
       </body>
     </html>
