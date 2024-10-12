@@ -7,8 +7,8 @@ interface AnimatedTextProps {
 }
 
 const defaultAnimation = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.1 } },
+  hidden: { opacity: 0, scale: 2 },
+  visible: { opacity: 1, scale:1, transition: { duration: 0.1 } },
 };
 
 export default function AnimatedText({ text, className }: AnimatedTextProps) {
@@ -22,7 +22,7 @@ export default function AnimatedText({ text, className }: AnimatedTextProps) {
         ref={ref}
         aria-hidden="true"
         variants={{
-          visible: { transition: { staggerChildren: 0.02 } },
+          visible: { transition: { staggerChildren: 0.01 } },
           hidden: {},
         }}
         initial="hidden"
