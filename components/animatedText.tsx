@@ -8,7 +8,7 @@ interface AnimatedTextProps {
 
 const defaultAnimation = {
   hidden: { opacity: 0, scale: 2 },
-  visible: { opacity: 1, scale:1, transition: { duration: 0.1 } },
+  visible: { opacity: 1, scale:1, transition: { duration: 0.1 }, delay: 0.8 },
 };
 
 export default function AnimatedText({ text, className }: AnimatedTextProps) {

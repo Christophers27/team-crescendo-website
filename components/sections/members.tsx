@@ -19,7 +19,7 @@ export default function Members() {
   return (
     <motion.section className='flex flex-col items-center section text-white'>
       <h2 className='text-4xl font-bold'>Meet the Team</h2>
-      <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 mt-8'>
+      <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-5 mt-8'>
         {members.map((member, index) => (
           <MemberCard key={index} name={member.name} role={member.role} image={member.image} />
         ))}
