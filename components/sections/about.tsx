@@ -4,7 +4,7 @@ import Image from "next/image";
 import AnimatedText from "../animatedText";
 
 const text =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fringilla tempor augue, vel consequat nibh rutrum a. Duis id tristique odio, eget ultricies nisi. Quisque egestas consequat ex vitae bibendum. Aenean lacinia nunc dui, in consequat urna aliquet et. Vestibulum eu sollicitudin quam. Mauris metus ipsum, ornare eget justo eu, aliquam dignissim odio. Aenean luctus, metus nec maximus posuere, lectus ex pharetra metus, et iaculis nulla mauris at mauris. Donec blandit neque ac lorem aliquam aliquet. In congue ac nisi et bibendum. Duis a tellus mollis, feugiat ipsum sit amet, dictum ante. Proin nulla lorem, condimentum eu ante ac, elementum imperdiet risus.";
+  "The team first started out in 2023 as a group of students from Carnegie Mellon University, brought together by our shared passion to make inspiring games. Our 10 members strive to create games that leave you with hours of enjoyment, and an impression that lasts.";
 
 export default function About() {
   return (
@@ -16,7 +16,7 @@ export default function About() {
         className="flex flex-initial items-center justify-center relative w-[100px] h-[100px]"
         initial={{ y: 200, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
       >
         <Image src="/logo.png" alt="Logo" layout="fill" objectFit="contain" />
       </motion.div>
@@ -24,7 +24,7 @@ export default function About() {
         className="text-4xl md:text-5xl lg:text-6xl font-semibold mt-4"
         initial={{ y: 200, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{  duration: 0.5, ease: "easeOut", delay: 0.5 }}
+        transition={{  duration: 0.8, ease: "easeOut", delay: 0.5 }}
       >
         Team Crescendo
       </motion.h1>

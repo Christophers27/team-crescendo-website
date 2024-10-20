@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { animate, motion, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 interface AnimatedTextProps {
   text: string;
