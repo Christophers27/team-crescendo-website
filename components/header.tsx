@@ -27,7 +27,7 @@ export default function Header() {
   const { showNav, toggleNav } = useMenuContext();
 
   const link = (text: string, href: string) => (
-    <motion.div initial="rest" animate="rest" whileHover="hover">
+    <motion.div className=" mr-auto" initial="rest" animate="rest" whileHover="hover">
       <a href={href} className="block text-white text-4xl font-bold">
         {text}
       </a>

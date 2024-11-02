@@ -36,7 +36,7 @@ export default function Games() {
           </h2>
           <p className="text-lg md:text-xl">{text}</p>
           <button className="bg-[#8b6b53] text-black border-black border-2 px-4 py-2 mt-8 rounded-full hover:scale-110 active:scale-105 transition-all">
-            <a href="/noire">Browse Games</a>
+            <a href="/games">Browse Games</a>
           </button>
         </div>
       </div>
