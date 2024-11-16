@@ -1,12 +1,8 @@
 "use client";
 
 import React from "react";
-import {
-  AiOutlineCopyright,
-  AiOutlineTwitter,
-  AiOutlineInstagram,
-  AiFillYoutube,
-} from "react-icons/ai";
+import { AiOutlineCopyright } from "react-icons/ai";
+import { BsTwitterX, BsYoutube, BsInstagram } from "react-icons/bs";
 import { motion } from "framer-motion";
 
 const underline = {
@@ -33,21 +29,21 @@ export default function Footer() {
     <div className="flex flex-col bg-[#0c101f] text-white pt-16 pb-4 gap-2 justify-center items-center">
       <div className="flex">
         {socialButton(
-          "https://youtu.be/dQw4w9WgXcQ?si=8b-MuQPSq7vQj4jy",
-          <AiOutlineTwitter className="text-4xl h-full mr-1" />
+          "https://x.com/TeamCrescendo_",
+          <BsTwitterX className="text-2xl h-full mr-2" />
         )}
         {socialButton(
           "https://youtu.be/dQw4w9WgXcQ?si=8b-MuQPSq7vQj4jy",
-          <AiOutlineInstagram className="text-4xl h-full mr-1" />
+          <BsInstagram className="text-2xl h-full mr-2" />
         )}
         {socialButton(
           "https://youtu.be/dQw4w9WgXcQ?si=8b-MuQPSq7vQj4jy",
-          <AiFillYoutube className="text-4xl h-full mr-1" />
+          <BsYoutube className="text-2xl h-full mr-2" />
         )}
       </div>
       <motion.div initial="rest" animate="rest" whileHover="hover">
         <a
-          href="mailto:christophersetiabudi@gmail.com"
+          href="mailto:contact@teamcrescnedo.net"
           className="font-thin text-xl"
         >
           Email Us!

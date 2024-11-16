@@ -23,3 +23,17 @@
 .flip-card-back {
     transform: rotateY(180deg);
 }
+
+.game-card {
+  width: auto;
+  height: auto;
+}
+
+.game-card[data-isExpanded="true"] {
+  position: fixed;
+  top: 4%;
+  left: 4%;
+  width: 92%;
+  height: 92%;
+  z-index: 1000;
+}

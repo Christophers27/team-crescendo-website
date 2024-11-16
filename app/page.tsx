@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Intro from "@/components/sections/intro";
-import Games from "@/components/sections/games";
+import AboutHome from "@/components/sections/aboutHome";
+import GamesIntro from "@/components/sections/gamesHome";
 import Title from "@/components/sections/title";
 import ImageDivider from "@/components/imageDivider";
 
@@ -17,9 +17,9 @@ export default function Home() {
         />
       </div>
       <Title />
-      <Intro />
+      <AboutHome />
       <ImageDivider />
-      <Games />
+      <GamesIntro />
     </main>
   );
 }

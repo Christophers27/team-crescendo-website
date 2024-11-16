@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 const text =
   "We are a team of indie game developers, brought together by our love for games with meaningful stories. Our goal is to make games that are fun to play, and leave a lasting impact on the player.";
 
-export default function Intro() {
+export default function AboutHome() {
   const { showNav } = useMenuContext();
 
   return (
