@@ -21,7 +21,7 @@
 }
 
 .flip-card-back {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .game-card {
@@ -36,4 +36,19 @@
   width: 92%;
   height: 92%;
   z-index: 1000;
+}
+
+::-webkit-scrollbar {
+  height: 12px;
+  width: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 100, 100, 0.5);
+  -webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
 }

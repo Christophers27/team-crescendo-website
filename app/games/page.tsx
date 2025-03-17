@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function Page() {
   return (
-    <main className="">
+    <main className="bg-black min-h-[100vh]">
       <GamesIntro />
       <GamesCatalog />
     </main>
