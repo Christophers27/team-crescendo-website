@@ -1,5 +1,6 @@
-import HomeAboutSection from "@/components/home-about-section";
-import HomeIntroSection from "@/components/home-intro-section";
+import HomeAboutSection from "@/components/sections/home-about-section";
+import HomeGameSection from "@/components/sections/home-game-section";
+import HomeIntroSection from "@/components/sections/home-intro-section";
 import React from "react";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <main className="page">
       <HomeIntroSection />
       <HomeAboutSection />
+      <HomeGameSection />
     </main>
   );
 }
