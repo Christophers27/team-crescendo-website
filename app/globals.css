@@ -8,7 +8,11 @@
 }
 
 .page {
-  @apply flex flex-col p-8 md:p-16 lg:p-32 min-h-screen bg-crescendo-dark-blue text-crescendo-white;
+  @apply flex flex-col min-h-screen bg-crescendo-black text-crescendo-white;
+}
+
+.section {
+  @apply flex flex-col px-8 md:px-16 lg:px-32 py-8 md:py-12 lg:py-16;
 }
 
 @keyframes slideshow {
