@@ -1,1 +1,46 @@
 @import "tailwindcss";
+
+@theme {
+  --color-crescendo-black: #010101;
+  --color-crescendo-white: #e4e4e4;
+  --color-crescendo-purple: #5f43b2;
+  --color-crescendo-dark-blue: #030821;
+}
+
+.page {
+  @apply flex flex-col p-8 md:p-16 lg:p-32 min-h-screen bg-crescendo-dark-blue text-crescendo-white;
+}
+
+@keyframes slideshow {
+  0% {
+    background-image: url("/images/slide1.png");
+  }
+  33% {
+    background-image: url("/images/slide1.png");
+  }
+  33.33% {
+    background-image: url("/images/slide2.png");
+  }
+  66% {
+    background-image: url("/images/slide2.png");
+  }
+  66.66% {
+    background-image: url("/images/slide3.jpg");
+  }
+  100% {
+    background-image: url("/images/slide3.jpg");
+  }
+}
+
+.bg-slideshow {
+  background-size: cover;
+  background-position: center;
+  animation: slideshow 9s infinite;
+}
+
+.bg-slideshow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
