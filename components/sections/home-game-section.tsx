@@ -20,14 +20,12 @@ export default function HomeGameSection() {
       <div className="flex flex-col md:flex-row gap-8 mt-8">
         {/* Image Container (Half Width on Medium Screens and Above) */}
         <div className="w-full md:w-1/2 aspect-[16/9]">
-          {" "}
-          {/* Adjust aspect ratio as needed */}
           <div className="relative w-full h-full">
             <Image
               src="/images/memoria-wake-home.png"
               alt="Memoria Wake"
               fill
-              className="rounded-lg object-contain" // Retain aspect ratio without cropping
+              className="rounded-lg object-contain"
             />
           </div>
         </div>
