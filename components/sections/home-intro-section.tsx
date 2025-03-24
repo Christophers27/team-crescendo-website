@@ -3,9 +3,9 @@ import React from "react";
 export default function HomeIntroSection() {
   return (
     <section className="section">
-      <div className="relative items-center md:items-start min-h-[75vh] px-8 md:px-16 py-16 rounded-4xl overflow-hidden text-center md:text-left">
+      <div className="relative items-center md:items-start min-h-[75vh] px-8 md:px-16 py-16 overflow-hidden text-center md:text-left">
         {/* Background Slideshow */}
-        <div className="absolute inset-0 z-0 bg-slideshow animate-slideshow" />
+        <div className="absolute inset-0 z-0  rounded-4xl bg-slideshow animate-slideshow" />
 
         {/* Content Container */}
         <div className="relative z-10 max-w-prose">
