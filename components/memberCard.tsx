@@ -13,7 +13,7 @@ export default function MemberCard({ member }: MemberCardProps) {
 
   return (
     <div
-      className="h-80 w-40 cursor-pointer perspective-midrange"
+      className="h-80 w-40 cursor-pointer"
       onClick={() => setIsFlipped(!isFlipped)}
     >
       <motion.div
