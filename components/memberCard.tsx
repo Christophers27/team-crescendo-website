@@ -1,53 +1,70 @@
+"use client";
+
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface MemberCardProps {
-  name: string;
-  role: string;
-  image: string;
-  paragraph?: string;
+  member: { name: string; roles: string[]; description: string; image: string };
 }
 
-export default function MemberCard({ name, role, image, paragraph }: MemberCardProps) {
+export default function MemberCard({ member }: MemberCardProps) {
   const [isFlipped, setIsFlipped] = useState(false);
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  const flipCard = () => {
-    if (!isAnimating) {
-      setIsAnimating(true);
-      setIsFlipped(!isFlipped);
-    }
-  };
 
   return (
-    <motion.div className="flip-card cursor-pointer" onClick={flipCard}>
+    <div
+      className="h-80 w-40 cursor-pointer perspective-midrange"
+      onClick={() => setIsFlipped(!isFlipped)}
+    >
       <motion.div
-        className="bg-neutral-950 flip-card-inner w-48 h-72 relative rounded-lg border-2 border-neutral-800 flex flex-col items-center"
-        initial={false}
-        animate={{
-          rotateY: isFlipped ? 180 : 360,
-          transition: { duration: 0.6 },
-        }}
-        transition={{ animationDirection: "normal" }}
-        onAnimationComplete={() => setIsAnimating(false)}
-        whileHover={{
-          scale: 1.05,
-          transition: { type: "spring", bounce: 0.5 },
-        }}
+        className="relative w-full h-full rounded-2xl shadow-md transition-all duration-300 border-2 border-crescendo-purple"
+        animate={{ rotateY: isFlipped ? 180 : 0 }}
+        transition={{ duration: 0.25 }}
+        style={{ transformStyle: "preserve-3d" }}
       >
-        <div className="flip-card-front flex flex-col items-center w-full gap-4 px-2 py-8">
-          <img src={image} alt={name} className="rounded-full w-32 h-32" />
-          <div className="flex flex-col items-center gap-2">
-            <h3 className="text-center text-lg font-semibold">{name}</h3>
-            <p className="text-center text-sm text-gray-300">{role}</p>
+        <motion.div
+          className="absolute w-full h-full backface-hidden bg-crescendo-white/10 rounded-xl p-4 flex flex-col items-center justify-between group"
+          style={{ backfaceVisibility: "hidden" }}
+        >
+          <div className="relative h-32 w-32 rounded-full overflow-hidden border-2 border-crescendo-purple mb-3">
+            <Image
+              src={member.image}
+              alt={`Portrait of ${member.name}`}
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-300"
+              sizes="(max-width: 768px) 100vw, 144px"
+              quality={90}
+            />
           </div>
-        </div>
-        <div className="flip-card-back px-2 py-8">
-          <p className="text-center text-sm text-gray-300">
-            {paragraph || "No additional information."}
-          </p>
-        </div>
+          
+          <div className="text-center">
+            <h3 className="text-lg font-bold text-crescendo-white mb-1">
+              {member.name}
+            </h3>
+            <div className="flex flex-wrap justify-center gap-1">
+              {member.roles.map((role, i) => (
+                <span
+                  key={i}
+                  className="px-2 py-0.5 bg-crescendo-purple/20 text-crescendo-white text-xs font-medium rounded-full"
+                >
+                  {role}
+                </span>
+              ))}
+            </div>
+          </div>
+          
+          <div className="w-8 h-1 bg-crescendo-purple/40 group-hover:bg-crescendo-purple rounded-full mt-2 transition" />
+        </motion.div>
+        <motion.div
+          className="absolute w-full h-full backface-hidden bg-crescendo-purple text-white rounded-xl p-4 rotate-y-180"
+          style={{ backfaceVisibility: "hidden" }}
+          initial={{ rotateY: 180 }}
+        >
+          <div className="h-full flex flex-col justify-center">
+            <p className="text-sm text-center">{member.description}</p>
+          </div>
+        </motion.div>
       </motion.div>
-    </motion.div>
+    </div>
   );
 }

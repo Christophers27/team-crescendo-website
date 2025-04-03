@@ -1,9 +1,10 @@
 "use client";
 
-import React from "react";
-import { AiOutlineCopyright } from "react-icons/ai";
-import { BsTwitterX, BsYoutube, BsInstagram } from "react-icons/bs";
+import React, { JSX } from "react";
 import { motion } from "framer-motion";
+import { AiOutlineCopyright, AiOutlineX } from "react-icons/ai";
+import { BsSteam, BsYoutube, BsDiscord } from "react-icons/bs";
+import Link from "next/link";
 
 const underline = {
   rest: {
@@ -15,48 +16,59 @@ const underline = {
 };
 
 export default function Footer() {
-  function socialButton(href: string, icon: JSX.Element) {
+  function linkButton(link: string, icon: JSX.Element) {
     return (
-      <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-        <a href={href} target="_blank">
+      <Link href={link} target="_blank">
+        <motion.div
+          whileHover={{ scale: 1.1, color: "#5f43b2" }}
+          whileTap={{ scale: 0.9 }}
+        >
           {icon}
-        </a>
-      </motion.div>
+        </motion.div>
+      </Link>
     );
   }
 
   return (
-    <div className="flex flex-col bg-[#0c101f] text-white pt-16 pb-4 gap-2 justify-center items-center">
-      <div className="flex">
-        {socialButton(
+    <footer className="flex flex-col mx-8 md:mx-16 lg:mx-32 py-4 md:py-8 text-crescendo-white items-center gap-4 border-t-2 border-crescendo-purple">
+      <div className="flex flex-row items-center justify-center gap-4">
+        {linkButton(
           "https://x.com/TeamCrescendo_",
-          <BsTwitterX className="text-2xl h-full mr-2" />
+          <AiOutlineX className="text-3xl" />
         )}
-        {socialButton(
-          "https://youtu.be/dQw4w9WgXcQ?si=8b-MuQPSq7vQj4jy",
-          <BsInstagram className="text-2xl h-full mr-2" />
+        {linkButton(
+          "https://discord.gg/VvEbKqNKmf",
+          <BsDiscord className="text-3xl" />
         )}
-        {socialButton(
-          "https://youtu.be/dQw4w9WgXcQ?si=8b-MuQPSq7vQj4jy",
-          <BsYoutube className="text-2xl h-full mr-2" />
+        {linkButton(
+          "https://www.youtube.com/@TeamCrescendo-Games",
+          <BsYoutube className="text-3xl" />
+        )}
+        {linkButton(
+          "https://store.steampowered.com/app/3240610/Memoria_Wake/",
+          <BsSteam className="text-3xl" />
         )}
       </div>
-      <motion.div initial="rest" animate="rest" whileHover="hover">
-        <a
-          href="mailto:contact@teamcrescnedo.net"
-          className="font-thin text-xl"
-        >
-          Email Us!
-        </a>
+      <div className="flex flex-row gap-8">
         <motion.div
-          variants={underline}
-          className="bg-white w-full h-px origin-left"
-        />
-      </motion.div>
+          className="flex flex-col w-fit items-center"
+          initial="rest"
+          animate="rest"
+          whileHover="hover"
+        >
+          <Link href="mailto:contact@teamcrescendo.net" className="font-thin">
+            Email Us!
+          </Link>
+          <motion.div
+            variants={underline}
+            className="bg-crescendo-purple w-full h-px origin-left"
+          />
+        </motion.div>
+      </div>
       <div className="flex items-center justify-center font-thin">
         <AiOutlineCopyright className="text-xl h-full mr-1" />{" "}
-        <p className="text-xl">2024 Team Crescendo LLC</p>
+        <p className="">2025 Team Crescendo LLC</p>
       </div>
-    </div>
+    </footer>
   );
 }

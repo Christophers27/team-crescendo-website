@@ -1,54 +1,50 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-crescendo-black: #010101;
+  --color-crescendo-white: #e4e4e4;
+  --color-crescendo-purple: #5f43b2;
+  --color-crescendo-dark-blue: #030821;
+}
+
+.page {
+  @apply flex flex-col min-h-screen bg-crescendo-black text-crescendo-white pt-16;
+}
 
 .section {
-  @apply px-8 md:px-16 lg:px-32 py-12 md:py-16 lg:py-24;
+  @apply flex flex-col px-8 md:px-16 lg:px-32 py-8 md:py-12 lg:py-16;
 }
 
-.flip-card {
-  perspective: 1000px;
+@keyframes slideshow {
+  0% {
+    background-image: url("/images/slide1.png");
+  }
+  33% {
+    background-image: url("/images/slide1.png");
+  }
+  33.33% {
+    background-image: url("/images/slide2.png");
+  }
+  66% {
+    background-image: url("/images/slide2.png");
+  }
+  66.66% {
+    background-image: url("/images/slide3.jpg");
+  }
+  100% {
+    background-image: url("/images/slide3.jpg");
+  }
 }
 
-.flip-card-inner {
-  transform-style: preserve-3d;
+.bg-slideshow {
+  background-size: cover;
+  background-position: center;
+  animation: slideshow 9s infinite;
 }
 
-.flip-card-front,
-.flip-card-back {
+.bg-slideshow::before {
+  content: "";
   position: absolute;
-  backface-visibility: hidden;
-}
-
-.flip-card-back {
-  transform: rotateY(180deg);
-}
-
-.game-card {
-  width: auto;
-  height: auto;
-}
-
-.game-card[data-isExpanded="true"] {
-  position: fixed;
-  top: 4%;
-  left: 4%;
-  width: 92%;
-  height: 92%;
-  z-index: 1000;
-}
-
-::-webkit-scrollbar {
-  height: 12px;
-  width: 5px;
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(100, 100, 100, 0.5);
-  -webkit-border-radius: 1ex;
-}
-
-::-webkit-scrollbar-corner {
-  background-color: transparent;
+  inset: 0;
+  background: linear-gradient(to right, rgba(1, 1, 1, 1), rgba(0, 0, 0, 0.2));
 }

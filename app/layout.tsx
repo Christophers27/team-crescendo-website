@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
-import Image from "next/image";
-import MenuContextProvider from "@/context/menuContext";
 import Footer from "@/components/footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Team Crescendo",
-  description: "An indie game dev team",
+  description: "An indie game studio",
 };
 
 export default function RootLayout({
@@ -20,12 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
-        <MenuContextProvider>
-          <Header />
-          {children}
-          <Footer />
-        </MenuContextProvider>
+      <body className={`${inter.className} antialiased bg-crescendo-black`}>
+        <Header />
+        {children}
+        <Footer />
       </body>
     </html>
   );

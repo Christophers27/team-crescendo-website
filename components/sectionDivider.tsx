@@ -1,0 +1,17 @@
+import React from "react";
+
+interface SectionDividerProps {
+    text: string;
+}
+
+export default function SectionDivider({ text }: SectionDividerProps) {
+  return (
+    <div className="flex items-center gap-4 md:gap-8">
+      <div className="h-0.5 bg-crescendo-purple w-full" />
+      <h2 className="text-2xl font-bold text-center whitespace-nowrap">
+        {text}
+      </h2>
+      <div className="h-0.5 bg-crescendo-purple w-full" />
+    </div>
+  );
+}
