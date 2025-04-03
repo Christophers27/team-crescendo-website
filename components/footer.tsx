@@ -3,7 +3,7 @@
 import React, { JSX } from "react";
 import { motion } from "framer-motion";
 import { AiOutlineCopyright, AiOutlineX } from "react-icons/ai";
-import { BsSteam, BsInstagram, BsYoutube } from "react-icons/bs";
+import { BsSteam, BsYoutube, BsDiscord } from "react-icons/bs";
 import Link from "next/link";
 
 const underline = {
@@ -19,7 +19,10 @@ export default function Footer() {
   function linkButton(link: string, icon: JSX.Element) {
     return (
       <Link href={link} target="_blank">
-        <motion.div whileHover={{ scale: 1.1, color: "#5f43b2" }} whileTap={{ scale: 0.9 }}>
+        <motion.div
+          whileHover={{ scale: 1.1, color: "#5f43b2" }}
+          whileTap={{ scale: 0.9 }}
+        >
           {icon}
         </motion.div>
       </Link>
@@ -34,11 +37,11 @@ export default function Footer() {
           <AiOutlineX className="text-3xl" />
         )}
         {linkButton(
-          "https://www.instagram.com/",
-          <BsInstagram className="text-3xl" />
+          "https://discord.gg/VvEbKqNKmf",
+          <BsDiscord className="text-3xl" />
         )}
         {linkButton(
-          "https://www.youtube.com/",
+          "https://www.youtube.com/@TeamCrescendo-Games",
           <BsYoutube className="text-3xl" />
         )}
         {linkButton(
