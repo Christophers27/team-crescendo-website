@@ -29,13 +29,17 @@ export default function AboutInfoSection() {
 
           <div className="space-y-4">
             <p className="text-lg leading-relaxed">
-              We named our studio <i>Crescendo</i> because it perfectly captures our
-              journey - starting small and growing louder together. (And yes, it
-              was totally coincidental that a team member&apos;s cat shares the same
-              name).
+              We named our studio <i>Crescendo</i> because it perfectly captures
+              our journey - starting small and growing louder together. (And
+              yes, it was totally coincidental that a team member&apos;s cat
+              shares the same name).
             </p>
             <p className="text-lg leading-relaxed">
-            Founded in 2023 by Carnegie Mellon students, we&apos;re now a team of 11 developers from 7 countries, bringing together our skills in visual art, music programming, and game design. United by our passion for games, we create experiences that we hope will stay with players. 
+              Founded in 2023 by Carnegie Mellon students, we&apos;re now a team
+              of 11 developers from 7 countries, bringing together our skills in
+              visual art, music programming, and game design. United by our
+              passion for games, we create experiences that we hope will stay
+              with players.
             </p>
           </div>
         </motion.div>

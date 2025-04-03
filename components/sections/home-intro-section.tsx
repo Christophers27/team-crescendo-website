@@ -7,15 +7,12 @@ export default function HomeIntroSection() {
   return (
     <section className="section">
       <div className="relative items-center md:items-start min-h-[75vh] px-8 md:px-16 py-16 overflow-hidden text-center md:text-left">
-        {/* Animated Background */}
         <motion.div
           className="absolute inset-0 z-0 rounded-4xl bg-slideshow animate-slideshow"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
         />
-
-        {/* Content Container */}
         <div className="relative z-10 max-w-prose">
           <motion.h1
             className="text-4xl md:text-6xl font-semibold mb-8 text-crescendo-white"

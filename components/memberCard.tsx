@@ -55,8 +55,6 @@ export default function MemberCard({ member }: MemberCardProps) {
           
           <div className="w-8 h-1 bg-crescendo-purple/40 group-hover:bg-crescendo-purple rounded-full mt-2 transition" />
         </motion.div>
-
-        {/* Back of Card */}
         <motion.div
           className="absolute w-full h-full backface-hidden bg-crescendo-purple text-white rounded-xl p-4 rotate-y-180"
           style={{ backfaceVisibility: "hidden" }}

@@ -20,7 +20,6 @@ export default function AnimatedButton({ text, link }: AnimatedButtonProps) {
       transition={{ duration: 0.5 }}
     >
       <Link href={link}>
-        {/* Sliding Background */}
         <motion.div
           className="absolute inset-0 h-full w-full bg-crescendo-purple rounded-full z-5"
           initial={false}
@@ -29,9 +28,7 @@ export default function AnimatedButton({ text, link }: AnimatedButtonProps) {
           }}
           transition={{ duration: 0.5 }}
         />
-        {/* Default Background */}
         <div className="absolute inset-0 bg-crescendo-white rounded-full" />
-        {/* Old Text */}
         <motion.span
           className="block relative z-10 text-crescendo-purple"
           initial={false}
@@ -42,7 +39,6 @@ export default function AnimatedButton({ text, link }: AnimatedButtonProps) {
         >
           {text}
         </motion.span>
-        {/* New Text */}
         <motion.span
           className="absolute inset-0 flex items-center justify-center z-10"
           initial={false}
