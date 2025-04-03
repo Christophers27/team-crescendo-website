@@ -46,5 +46,5 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.2));
+  background: linear-gradient(to right, rgba(1, 1, 1, 1), rgba(0, 0, 0, 0.2));
 }
