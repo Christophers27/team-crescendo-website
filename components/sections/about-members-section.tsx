@@ -63,6 +63,13 @@ const members = [
     image: "/profiles/mark.png",
   },
   {
+    name: "Miguel",
+    roles: ["Marketing Manager"],
+    description:
+      "Miguel specialises in marketing and enjoys working in the digital media world. He manages the community. uses data analysis skills to maximise reach to consumers through media campaigns.",
+    image: "/profiles/miguel.png",
+  },
+  {
     name: "Stanley",
     roles: ["3D Artist"],
     description:
