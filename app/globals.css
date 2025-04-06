@@ -8,7 +8,7 @@
 }
 
 .page {
-  @apply flex flex-col min-h-screen bg-crescendo-black text-crescendo-white pt-16;
+  @apply flex flex-col bg-crescendo-black text-crescendo-white pt-16;
 }
 
 .section {
