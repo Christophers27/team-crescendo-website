@@ -6,8 +6,12 @@ export async function generateStaticParams() {
   return blogs.map((blog) => ({ slug: blog.slug }));
 }
 
-export default function BlogPage({ params }: { params: { slug: string } }) {
-  const blog = blogs.find((blog) => blog.slug === params.slug);
+type BlogPageProps = Promise<{ slug: string }>;
+
+export default async function BlogPage(props: { params: BlogPageProps }) {
+  const { slug } = await props.params;
+
+  const blog = blogs.find((blog) => blog.slug === slug);
 
   console.log("Blog:", blog);
 

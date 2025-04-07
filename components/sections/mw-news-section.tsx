@@ -5,14 +5,14 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { BsX } from "react-icons/bs";
 import SectionDivider from "../sectionDivider";
-import { news } from "@/lib/data";
+import { newsMW } from "@/lib/data";
 
-type NewsItem = (typeof news)[number];
+type NewsItem = (typeof newsMW)[number];
 
 export default function MWNewsSection() {
   const [selectedId, setSelectedId] = useState<number | null>(null);
-  const firstRowItems = news.slice(0, Math.ceil(news.length / 2));
-  const secondRowItems = news.slice(Math.ceil(news.length / 2));
+  const firstRowItems = newsMW.slice(0, Math.ceil(newsMW.length / 2));
+  const secondRowItems = newsMW.slice(Math.ceil(newsMW.length / 2));
 
   const handleCardClick = (id: number) => {
     setSelectedId(selectedId === id ? null : id);
@@ -38,7 +38,7 @@ export default function MWNewsSection() {
 
         <div className="flex gap-4 flex-nowrap">
           {secondRowItems.map((item, index) => {
-            const cardId = index + Math.ceil(news.length / 2);
+            const cardId = index + Math.ceil(newsMW.length / 2);
             return (
               <NewsCard
                 key={cardId}
@@ -56,7 +56,7 @@ export default function MWNewsSection() {
       <AnimatePresence>
         {selectedId !== null && (
           <NewsModal
-            item={news[selectedId]}
+            item={newsMW[selectedId]}
             onClose={() => setSelectedId(null)}
             selectedId={selectedId}
           />
