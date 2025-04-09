@@ -3,7 +3,7 @@
 import React, { JSX } from "react";
 import { motion } from "framer-motion";
 import { AiOutlineCopyright, AiOutlineX } from "react-icons/ai";
-import { BsSteam, BsYoutube, BsDiscord } from "react-icons/bs";
+import { BsSteam, BsYoutube, BsDiscord, BsLinkedin } from "react-icons/bs";
 import Link from "next/link";
 
 const underline = {
@@ -47,6 +47,10 @@ export default function Footer() {
         {linkButton(
           "https://store.steampowered.com/app/3240610/Memoria_Wake/",
           <BsSteam className="text-3xl" />
+        )}
+        {linkButton(
+          "https://www.linkedin.com/company/team-crescendo-games/",
+          <BsLinkedin className="text-3xl" />
         )}
       </div>
       <div className="flex flex-row gap-8">

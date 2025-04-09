@@ -12,12 +12,15 @@ export default async function BlogPage(props: { params: BlogPageProps }) {
   const { slug } = await props.params;
 
   const blog = blogs.find((blog) => blog.slug === slug);
-
-  console.log("Blog:", blog);
-
   if (!blog) {
     notFound();
   }
+
+  const formattedDate = new Date(blog.date).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
 
   return (
     <main className="page">
@@ -26,8 +29,8 @@ export default async function BlogPage(props: { params: BlogPageProps }) {
           <h1 className="text-4xl font-bold text-crescendo-white mb-4">
             {blog.title}
           </h1>
-          <p className="text-crescendo-white/60">
-            Published on {new Date(blog.date).toLocaleDateString()}
+          <p className="text-crescendo-white/60 mb-4">
+            Published on {formattedDate}
           </p>
           <div className="aspect-[16/9] relative mb-8">
             <Image
