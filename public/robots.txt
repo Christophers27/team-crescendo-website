@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.team-crescendo.com/
+
+# Sitemaps
+Sitemap: https://www.team-crescendo.com/sitemap.xml

@@ -3,7 +3,7 @@ export const blogs = [
     slug: "memoria-wake-announcement",
     game: "Memoria Wake",
     title: "Announcing Memoria Wake - Our First Game!",
-    date: "2024-04-06",
+    date: "2025-04-06",
     image: "/images/memoria-wake-home.png",
     description:
       "Team Crescendo announces their first game Memoria Wake and opens community Discord",
