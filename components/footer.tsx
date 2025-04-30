@@ -6,15 +6,6 @@ import { AiOutlineCopyright, AiOutlineX } from "react-icons/ai";
 import { BsSteam, BsYoutube, BsDiscord, BsLinkedin } from "react-icons/bs";
 import Link from "next/link";
 
-const underline = {
-  rest: {
-    scaleX: 0,
-  },
-  hover: {
-    scaleX: 1,
-  },
-};
-
 export default function Footer() {
   function linkButton(link: string, icon: JSX.Element) {
     return (
@@ -54,20 +45,12 @@ export default function Footer() {
         )}
       </div>
       <div className="flex flex-row gap-8">
-        <motion.div
-          className="flex flex-col w-fit items-center"
-          initial="rest"
-          animate="rest"
-          whileHover="hover"
-        >
-          <Link href="mailto:contact@teamcrescendo.net" className="font-thin">
+        <div className="relative">
+          <Link href="mailto:contact@teamcrescendo.net" className="font-thin group">
             Email Us!
+            <span className="absolute left-0 bottom-0 w-0 h-px bg-crescendo-purple transition-all duration-300 group-hover:w-full" />
           </Link>
-          <motion.div
-            variants={underline}
-            className="bg-crescendo-purple w-full h-px origin-left"
-          />
-        </motion.div>
+        </div>
       </div>
       <div className="flex items-center justify-center font-thin">
         <AiOutlineCopyright className="text-xl h-full mr-1" />{" "}

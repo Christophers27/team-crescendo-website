@@ -92,6 +92,21 @@ export default function Header() {
 }
 
 function MenuIcon({ isOpen }: { isOpen: boolean }) {
+  const top = {
+    closed: { rotate: 0, y: 0 },
+    open: { rotate: 45, y: 6, x: 0 },
+  };
+
+  const center = {
+    closed: { scaleX: 1 },
+    open: { scaleX: 0 },
+  };
+
+  const bottom = {
+    closed: { rotate: 0, y: 0 },
+    open: { rotate: -45, y: -6, x: 0 },
+  };
+
   return (
     <svg
       width="24"
@@ -99,24 +114,28 @@ function MenuIcon({ isOpen }: { isOpen: boolean }) {
       viewBox="0 0 24 24"
       stroke="currentColor"
       strokeWidth="2"
+      strokeLinecap="round"
     >
       <motion.path
-        d={isOpen ? "M5 5L19 19" : "M3 6H21"}
-        initial={false}
-        animate={{ d: isOpen ? "M5 5L19 19" : "M3 6H21" }}
-        transition={{ type: "spring", stiffness: 500, damping: 30 }}
+        d="M3 6H21"
+        variants={top}
+        initial="closed"
+        animate={isOpen ? "open" : "closed"}
+        transition={{ duration: 0.2 }}
       />
       <motion.path
         d="M3 12H21"
-        initial={false}
-        animate={{ opacity: isOpen ? 0 : 1 }}
+        variants={center}
+        initial="closed"
+        animate={isOpen ? "open" : "closed"}
         transition={{ duration: 0.1 }}
       />
       <motion.path
-        d={isOpen ? "M5 19L19 5" : "M3 18H21"}
-        initial={false}
-        animate={{ d: isOpen ? "M5 19L19 5" : "M3 18H21" }}
-        transition={{ type: "spring", stiffness: 500, damping: 30 }}
+        d="M3 18H21"
+        variants={bottom}
+        initial="closed"
+        animate={isOpen ? "open" : "closed"}
+        transition={{ duration: 0.2 }}
       />
     </svg>
   );
