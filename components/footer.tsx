@@ -3,7 +3,7 @@
 import React, { JSX } from "react";
 import { motion } from "framer-motion";
 import { AiOutlineCopyright, AiOutlineX } from "react-icons/ai";
-import { BsSteam, BsYoutube, BsDiscord, BsLinkedin } from "react-icons/bs";
+import { BsSteam, BsYoutube, BsDiscord, BsLinkedin, BsTiktok } from "react-icons/bs";
 import Link from "next/link";
 
 export default function Footer() {
@@ -26,6 +26,10 @@ export default function Footer() {
         {linkButton(
           "https://x.com/TeamCrescendo_",
           <AiOutlineX className="text-3xl" />
+        )}
+        {linkButton(
+          "https://www.tiktok.com/@teamcrescendo_",
+          <BsTiktok className="text-3xl" />
         )}
         {linkButton(
           "https://discord.gg/VvEbKqNKmf",
