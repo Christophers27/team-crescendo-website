@@ -150,13 +150,6 @@ export const members = [
     image: "/profiles/mark.png",
   },
   {
-    name: "Miguel",
-    roles: ["Marketing Manager"],
-    description:
-      "Miguel specializes in marketing and enjoys working in digital media. He manages the community and uses data analysis skills to maximize consumer reach through media campaigns. ",
-    image: "/profiles/miguel.png",
-  },
-  {
     name: "Stanley",
     roles: ["3D Artist"],
     description:

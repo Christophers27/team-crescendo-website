@@ -36,7 +36,7 @@ export default function AboutInfoSection() {
             </p>
             <p className="text-lg leading-relaxed">
               Founded in 2023 by Carnegie Mellon students, we&apos;re now a team
-              of 11 developers from 7 countries, bringing together our skills in
+              of 10 developers from 7 countries, bringing together our skills in
               visual art, music programming, and game design. United by our
               passion for games, we create experiences that we hope will stay
               with players.
