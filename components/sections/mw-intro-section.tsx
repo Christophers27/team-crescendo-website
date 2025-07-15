@@ -79,7 +79,7 @@ export default function MWIntroSection() {
           </motion.p>
 
           <motion.div
-            className="flex justify-center md:justify-start"
+            className="flex gap-4 justify-center md:justify-start"
             variants={{
               hidden: { opacity: 0, scale: 0.9 },
               visible: {
@@ -96,6 +96,10 @@ export default function MWIntroSection() {
             <AnimatedButton
               text="Steam"
               link="https://store.steampowered.com/app/3240610/Memoria_Wake/"
+            />
+            <AnimatedButton
+              text="Website"
+              link="https://memoria-wake.com/"
             />
           </motion.div>
         </motion.div>
