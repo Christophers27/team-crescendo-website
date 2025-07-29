@@ -80,6 +80,43 @@ export const blogs = [
       </div>
     `,
   },
+  {
+    slug: "memoria-wake-demo-release",
+    game: "Memoria Wake",
+    title: "Memoria Wake Demo Now Available!",
+    date: "2025-07-29",
+    image: "/images/memoria-wake-demo-release.jpg",
+    description: "The Memoria Wake demo is now available on Steam! Experience a sneak peek of the first two levels of our game!",
+    content: `
+      <div class="max-w-none">
+        <p class="mb-6 text-crescendo-white">
+          We are thrilled to announce that the demo for 
+          <span class="font-bold text-crescendo-purple">Memoria Wake</span> is now available on Steam! 
+          This demo features a sneak peek of the first <span class="font-bold">two</span> levels of our game! Test your skills against 3 of our 20 planned bosses, explore the world, and uncover the story of <span class="font-bold">Nilo</span> in his journey across the dreamscape.
+        </p>
+        
+        <p class="mb-6 text-crescendo-white">
+          We invite you to download the demo and experience the beginning of our journey. 
+          Your feedback is invaluable to us as we continue to develop Memoria Wake.
+        </p>
+        
+        <div class="text-center my-8">
+          <a 
+            href="https://store.steampowered.com/app/3240610/Memoria_Wake/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-block px-6 py-3 bg-crescendo-purple text-crescendo-white rounded-lg font-bold hover:bg-crescendo-purple/80 transition-colors"
+          >
+            Download the Demo
+          </a>
+        </div>
+        
+        <p class="text-center text-crescendo-white/80">
+          Thank you for your support, and we hope you enjoy playing the demo!
+        </p>
+      </div>
+    `,
+  }
 ];
 
 export const newsMW = blogs
