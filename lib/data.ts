@@ -116,7 +116,63 @@ export const blogs = [
         </p>
       </div>
     `,
-  }
+  },
+  {
+  slug: "pax-west-2025",
+  game: "Memoria Wake",
+  title: "Team Crescendo is Coming to PAX West 2025!",
+  date: "2025-08-29",
+  image: "/images/memoria-wake-pax-splash.png",
+  description: "Team Crescendo will be at PAX West 2025 in Seattle! Come play the latest demo of Memoria Wake, meet the devs, and grab some exclusive merch.",
+  content: `
+    <div class="max-w-none">
+      <p class="mb-6 text-crescendo-white">
+        Big news — <span class="font-bold text-crescendo-purple">Team Crescendo</span> is heading to 
+        <span class="font-bold">PAX West 2025</span>! 🎉  
+        One of the biggest gaming expos on the West Coast, this year's event takes place 
+        <span class="font-bold">August 29 - September 1</span> (Friday through Monday) 
+        at the <span class="font-bold">Summit Building in Seattle</span>.
+      </p>
+
+      <p class="mb-6 text-crescendo-white">
+        We'll be showcasing the <span class="font-bold">latest version of the Memoria Wake demo</span>, 
+        packed with even more content than before - including a few new bosses to test your skills against.  
+        If you've tried our earlier demo, this one goes further, and we can't wait to see what you think!
+      </p>
+
+      <div class="bg-crescendo-black/50 border-l-4 border-crescendo-purple p-4 my-6">
+        <h3 class="text-xl font-bold text-crescendo-white mb-3">
+          Why stop by our booth?
+        </h3>
+        <ul class="list-none space-y-2">
+          <li class="flex items-start">
+            <span class="text-crescendo-purple mr-2">⭐</span>
+            <span class="text-crescendo-white">Play the newest demo of Memoria Wake</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-crescendo-purple mr-2">⭐</span>
+            <span class="text-crescendo-white">Meet the developers and ask us anything</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-crescendo-purple mr-2">⭐</span>
+            <span class="text-crescendo-white">Pick up some exclusive Team Crescendo merch</span>
+          </li>
+        </ul>
+      </div>
+
+      <p class="mb-6 text-crescendo-white">
+        We'll be hanging out at the booth the entire weekend, ready to chat, answer questions about the 
+        game, and share what's next for <span class="font-bold">Team Crescendo</span>.  
+        Whether you're a longtime supporter or discovering us for the first time, we'd love to meet you!
+      </p>
+
+      <p class="text-center text-crescendo-white/80">
+        See you at PAX West in Seattle! ✨
+      </p>
+    </div>
+  `,
+},
+
 ];
 
 export const newsMW = blogs
