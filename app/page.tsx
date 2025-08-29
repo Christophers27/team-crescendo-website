@@ -5,7 +5,7 @@ import HomeIntroSection from "@/components/sections/home-intro-section";
 
 export default function Home() {
   return (
-    <main className="page">
+    <main className="page pt-0!">
       <HomeIntroSection />
       <HomeAboutSection />
       <HomeGameSection />
