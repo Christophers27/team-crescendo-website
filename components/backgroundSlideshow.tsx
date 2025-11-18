@@ -11,7 +11,7 @@ export default function BackgroundSlideshow({ slides }: { slides: string[] }) {
       setIndex((prev) => (prev + 1) % slides.length);
     }, 10000); // change every 10s
     return () => clearInterval(interval);
-  }, []);
+  }, [slides.length]);
 
   return (
     <div className="absolute inset-0 overflow-hidden">
