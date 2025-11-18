@@ -12,7 +12,7 @@ export default function AnimatedButton({ text, link }: AnimatedButtonProps) {
 
   return (
     <motion.button
-      className="relative overflow-hidden px-8 py-4 rounded-full border-2 border-crescendo-purple w-fit"
+      className="relative overflow-hidden px-6 py-3 rounded-full border-2 border-crescendo-purple w-fit font-inter"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       initial={false}

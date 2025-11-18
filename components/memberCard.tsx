@@ -38,14 +38,14 @@ export default function MemberCard({ member }: MemberCardProps) {
           </div>
           
           <div className="text-center">
-            <h3 className="text-lg font-bold text-crescendo-white mb-1">
+            <h3 className="text-xl tracking-wider font-bold text-crescendo-white mb-1">
               {member.name}
             </h3>
             <div className="flex flex-wrap justify-center gap-1">
               {member.roles.map((role, i) => (
                 <span
                   key={i}
-                  className="px-2 py-0.5 bg-crescendo-purple/20 text-crescendo-white text-xs font-medium rounded-full"
+                  className="px-2 py-0.5 bg-crescendo-purple/20 text-crescendo-white tracking-wider text-xs font-medium rounded-full"
                 >
                   {role}
                 </span>

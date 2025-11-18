@@ -32,7 +32,7 @@ export default function Header() {
                 priority
               />
             </div>
-            <span className="ml-3 text-xl font-semibold text-crescendo-white group-hover:text-crescendo-purple transition-colors">
+            <span className="ml-3 text-2xl tracking-widest font-semibold text-crescendo-white group-hover:text-crescendo-purple transition-colors">
               Team Crescendo
             </span>
           </Link>
@@ -43,7 +43,7 @@ export default function Header() {
               <Link
                 key={link.path}
                 href={link.path}
-                className="px-3 py-2 rounded-md text-sm font-medium text-crescendo-white hover:text-crescendo-purple hover:bg-crescendo-purple/10 transition-colors"
+                className="px-3 py-2 rounded-md text-lg tracking-wide font-medium text-crescendo-white hover:text-crescendo-purple hover:bg-crescendo-purple/10 transition-colors"
               >
                 {link.name}
               </Link>
@@ -76,7 +76,7 @@ export default function Header() {
                   <Link
                     key={link.path}
                     href={link.path}
-                    className="px-3 py-2 rounded-md text-base font-medium text-crescendo-white hover:text-crescendo-purple hover:bg-crescendo-purple/10"
+                    className="px-3 py-2 rounded-md text-lg tracking-wider font-medium text-crescendo-white hover:text-crescendo-purple hover:bg-crescendo-purple/10"
                     onClick={toggleMenu}
                   >
                     {link.name}

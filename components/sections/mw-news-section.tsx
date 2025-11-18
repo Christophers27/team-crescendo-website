@@ -103,7 +103,7 @@ function NewsCard({ item, id, isSelected, onClick }: NewsCardProps) {
 
         <div className="flex flex-col justify-between p-4 w-full md:w-2/3">
           <div>
-            <h3 className="text-xl font-bold line-clamp-2 text-crescendo-white">
+            <h3 className="text-xl tracking-wide font-bold line-clamp-2 text-crescendo-white">
               {item.title}
             </h3>
             <p className="text-crescendo-white/60 text-sm font-light">
@@ -175,7 +175,7 @@ function NewsModal({ item, onClose, selectedId }: NewsModalProps) {
           </div>
 
           <div className="flex flex-col p-6 w-full md:w-1/2 space-y-4">
-            <h3 className="text-2xl max-w-5/6 font-bold text-crescendo-white">
+            <h3 className="text-2xl tracking-wide max-w-5/6 font-bold text-crescendo-white">
               {item.title}
             </h3>
             <p className="text-crescendo-white/60 text-sm font-light">

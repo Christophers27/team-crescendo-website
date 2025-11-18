@@ -15,18 +15,18 @@ export default function HomeAboutSection() {
         className="flex flex-col items-center gap-8"
       >
         <motion.h1
-          className="text-2xl md:text-4xl font-semibold text-crescendo-white"
+          className="text-2xl md:text-4xl font-semibold text-crescendo-white tracking-wider"
           variants={{
             hidden: { opacity: 0, y: 20 },
             visible: { opacity: 1, y: 0 },
           }}
           transition={{ type: "spring", stiffness: 300 }}
         >
-          Who are We?
+          Who are We ?
         </motion.h1>
 
         <motion.p
-          className="md:text-lg text-center max-w-prose text-crescendo-white/80"
+          className="text-center max-w-prose text-crescendo-white/80 text-lg md:text-xl tracking-wider"
           variants={{
             hidden: { opacity: 0, y: 10 },
             visible: { opacity: 1, y: 0 },

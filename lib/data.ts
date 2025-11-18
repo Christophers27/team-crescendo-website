@@ -222,13 +222,6 @@ export const members = [
     image: "/profiles/hank.png",
   },
   {
-    name: "Jingxuan",
-    roles: ["Game Designer", "Gameplay Engineer"],
-    description:
-      "Jingxuan is a generalist with a background in software engineering and a hobby for art. They bring a versatile skill set to the team, contributing to both technical development and gameplay design.",
-    image: "/profiles/jingxuan.png",
-  },
-  {
     name: "Leo",
     roles: ["Composer"],
     description:

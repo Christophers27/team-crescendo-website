@@ -66,10 +66,10 @@ export default function HomeIntroSection() {
       />
 
       <div className="relative z-10 max-w-prose py-32">
-        <h1 className="text-5xl md:text-7xl font-semibold mb-6">
+        <h1 className="text-5xl md:text-7xl font-semibold mb-6 tracking-wider">
           Team Crescendo
         </h1>
-        <h2 className="text-xl md:text-2xl italic text-crescendo-white/90">
+        <h2 className="text-xl md:text-3xl italic text-crescendo-white/90 ">
           Tell stories that resonate, make games that inspire
         </h2>
       </div>

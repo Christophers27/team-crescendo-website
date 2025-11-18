@@ -5,6 +5,7 @@
   --color-crescendo-white: #e4e4e4;
   --color-crescendo-purple: #5f43b2;
   --color-crescendo-dark-blue: #030821;
+  --font-inter: var(--font-inter);
 }
 
 .page {

@@ -42,7 +42,7 @@ export default function HomeGameSection() {
                 src="/images/memoria-wake-home.png"
                 alt="Memoria Wake"
                 fill
-                className="rounded-2xl object-contain"
+                className="rounded-2xl object-cover"
                 priority
               />
             </div>
@@ -59,7 +59,7 @@ export default function HomeGameSection() {
             }}
           >
             <motion.h3
-              className="text-2xl font-bold text-crescendo-white"
+              className="text-lg md:text-2xl tracking-wide font-bold text-crescendo-white"
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },

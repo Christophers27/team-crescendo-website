@@ -1,20 +1,31 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 
 const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-inter",
 });
+
+const goudos = localFont({ src: "./goudos.ttf" });
 
 export const metadata: Metadata = {
   title: "Team Crescendo | Indie Game Studio",
-  description: "Team Crescendo is an indie game studio crafting immersive, story-driven adventures. Our debut game, Memoria Wake, is coming soon.",
-  keywords: ["indie game studio", "Memoria Wake", "story-driven games", "Team Crescendo"],
+  description:
+    "Team Crescendo is an indie game studio crafting immersive, story-driven adventures. Our debut game, Memoria Wake, is coming soon.",
+  keywords: [
+    "indie game studio",
+    "Memoria Wake",
+    "story-driven games",
+    "Team Crescendo",
+  ],
   openGraph: {
     title: "Team Crescendo | Indie Game Studio",
-    description: "Creating games that inspire. Memoria Wake - a top-down adventure game - coming soon.",
+    description:
+      "Creating games that inspire. Memoria Wake - a top-down adventure game - coming soon.",
     images: [
       {
         url: "https://www.team-crescendo.com/images/logo.png",
@@ -41,7 +52,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased bg-crescendo-black`}>
+      <body className={`${goudos.className} ${inter.variable} antialiased bg-crescendo-black`}>
         <Header />
         {children}
         <Footer />

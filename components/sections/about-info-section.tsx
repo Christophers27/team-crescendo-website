@@ -19,7 +19,7 @@ export default function AboutInfoSection() {
           transition={{ duration: 0.6 }}
         >
           <motion.h1
-            className="text-4xl font-bold mb-4"
+            className="text-4xl font-bold mb-4 tracking-wider"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
@@ -36,14 +36,14 @@ export default function AboutInfoSection() {
             </p>
             <p className="text-lg leading-relaxed">
               Founded in 2023 by Carnegie Mellon students, we&apos;re now a team
-              of 10 developers from 7 countries, bringing together our skills in
+              of 9 developers from 6 countries, bringing together our skills in
               visual art, music programming, and game design. United by our
               passion for games, we create experiences that we hope will stay
               with players.
             </p>
           </div>
         </motion.div>
-        <div className="w-full lg:w-1/2 flex flex-col items-center justify-center p-8 bg-gradient-to-br from-purple-200 to-blue-200 rounded-4xl">
+        <motion.div className="w-full lg:w-1/2 flex flex-col items-center justify-center p-8 bg-gradient-to-br from-purple-200 to-blue-200 rounded-4xl">
           <motion.div
             className="text-center space-y-6"
             initial="hidden"
@@ -69,7 +69,7 @@ export default function AboutInfoSection() {
               variants={taglineVariants}
             />
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

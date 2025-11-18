@@ -97,10 +97,7 @@ export default function MWIntroSection() {
               text="Steam"
               link="https://store.steampowered.com/app/3240610/Memoria_Wake/"
             />
-            <AnimatedButton
-              text="Website"
-              link="https://memoria-wake.com/"
-            />
+            <AnimatedButton text="Website" link="https://memoria-wake.com/" />
           </motion.div>
         </motion.div>
       </motion.div>
