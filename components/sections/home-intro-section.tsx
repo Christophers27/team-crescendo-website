@@ -4,6 +4,7 @@ import React, { useRef } from "react";
 import { motion, useMotionValue, useTransform, useSpring } from "motion/react";
 import ParticleField from "../particleField";
 import BackgroundSlideshow from "../backgroundSlideshow";
+import { BsArrowDown } from "react-icons/bs";
 
 export default function HomeIntroSection() {
   const ref = useRef<HTMLDivElement>(null);
@@ -80,13 +81,12 @@ export default function HomeIntroSection() {
         animate={{ opacity: 1 }}
         transition={{ delay: 2 }}
       >
-        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ repeat: Infinity, duration: 1.5 }}
-            className="w-1 h-3 bg-white rounded-full mt-2"
-          />
-        </div>
+        <motion.div
+          animate={{ y: [0, 8, 0] }}
+          transition={{ repeat: Infinity, duration: 1.5 }}
+        >
+          <BsArrowDown className="text-4xl" />
+        </motion.div>
       </motion.div>
     </section>
   );
